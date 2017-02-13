@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" content="text/html">
+    <title>Welcome to Spring Boot</title>
+    <script type="application/javascript">
+        function addBook() {
+//            var form = document.forms[0];
+            var form = document.getElementById("form1");
+            form.action = "/data/jdbc/book/add";
+            form.method = "post";
+            form.submit();
+        }
+
+        function updateBook() {
+//            var form = document.forms[1];
+            var form = document.getElementById("form1");
+            form.action = "/data/jdbc/book/update";
+            form.method="post";
+            form.submit();
+        }
+
+        function deleteBook() {
+//            var form = document.forms[1];
+            var form = document.getElementById("form2");
+            form.action = "/data/jdbc/book/delete";
+            form.method="post";
+            form.submit();
+        }
+
+        function queryBook() {
+//            var form = document.forms[1];
+            var form = document.getElementById("form2");
+            form.action = "/data/jdbc/book/query";
+            form.method="post";
+            form.submit();
+        }
+
+        //
+        function addUser() {
+            var form = document.getElementById("form3");
+            form.action = "/data/jpa/add";
+            form.method="get"
+            form.submit();
+        }
+
+        function findUsers() {
+            var form = document.getElementById("form3");
+            form.action = "/data/jpa/all";
+            form.method="get"
+            form.submit();
+        }
+
+        function findUser() {
+            var form = document.getElementById("form3");
+            form.action = "/data/jpa/find";
+            form.method="post"
+            form.submit();
+        }
+
+        function deleteUser() {
+            var form = document.getElementById("form3");
+            form.action = "/data/jpa/delete";
+            form.method="post"
+            form.submit();
+        }
+
+        function updateUser() {
+            var form = document.getElementById("form3");
+            form.action = "/data/jpa/update";
+            form.method="post"
+            form.submit();
+        }
+    </script>
+</head>
+<body>
+
+<form id="form1">
+    <table>
+        <tr>
+            <td>Book id: </td>
+            <td>
+                <input type="text" name="id">
+            </td>
+        </tr>
+        <tr>
+            <td>bookName: </td>
+            <td>
+                <input type="text" name="bookName">
+            </td>
+        </tr>
+        <tr>
+            <td>price: </td>
+            <td>
+                <input type="text" name="price">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="add" onclick="addBook()">
+            </td>
+
+            <td>
+                <input type="button" value="update" onclick="updateBook()">
+            </td>
+        </tr>
+    </table>
+    <!--<p>bookName: <input type="text" name="bookName" /></p>-->
+    <!--<p>price: <input type="text" name="price" /></p>-->
+    <!--<input type="submit" value="Submit" />-->
+</form>
+
+<form id="form2">
+    <table>
+        <tr>
+            query and delete operation
+        </tr>
+        <tr>
+            <td>Book id: </td>
+            <td>
+                <input type="text" name="id">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="query" onclick="queryBook()">
+            </td>
+            <td>
+                <input type="button" value="delete" onclick="deleteBook()">
+            </td>
+        </tr>
+    </table>
+</form>
+
+<hr>
+<p>JPA Data Operation</p>
+<form id="form3">
+    <table>
+        <td>id: </td>
+        <td>
+            <input type="text" name="id">
+        </td>
+        <tr>
+            <td>name: </td>
+            <td>
+                <input type="text" name="name">
+            </td>
+        </tr>
+        <tr>
+            <td>email: </td>
+            <td>
+                <input type="text" name="email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="addJpaData" onclick="addUser()">
+            </td>
+
+            <td>
+                <input type="button" value="findJpaData" onclick="findUsers()">
+            </td>
+        </tr>
+        <tr>
+            <!--<td>-->
+                <!--<input type="button" value="updateJpaData" onclick="updateUser()">-->
+            <!--</td>-->
+            <td>
+                <input type="button" value="findAJpaData" onclick="findUser()">
+            </td>
+
+            <td>
+                <input type="button" value="deleteJpaData" onclick="deleteUser()">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
