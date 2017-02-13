@@ -48,9 +48,10 @@ public class JpaController {
         return user;
     }
 
-//    @PostMapping("/update")
-//    public @ResponseBody User updateUser(User user) {
+    @PostMapping("/update")
+    public @ResponseBody User updateUser(User user) {
 //        userRepository.update(user.getName(),user.getEmail(),user.getId());
-//        return user;
-//    }
+        user = new User(2, "Jack", "jack@mit.edu");
+        return user;
+    }
 }

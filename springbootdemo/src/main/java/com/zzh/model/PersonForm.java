@@ -1,4 +1,4 @@
-package com.zzh.dataDAO;
+package com.zzh.model;
 
 import lombok.Data;
 

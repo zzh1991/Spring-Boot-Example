@@ -1,5 +1,6 @@
 package com.zzh.dataDAO;
 
+import com.zzh.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

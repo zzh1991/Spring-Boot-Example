@@ -1,4 +1,4 @@
-package com.zzh.dataDAO;
+package com.zzh.model;
 
 /**
  * Created by dell on 2017/2/10.

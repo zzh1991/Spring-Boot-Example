@@ -1,5 +1,6 @@
-package com.zzh.dataDAO;
+package com.zzh.controller;
 
+import com.zzh.model.PersonForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
