@@ -40,36 +40,71 @@
         function addUser() {
             var form = document.getElementById("form3");
             form.action = "/data/jpa/add";
-            form.method="get"
+            form.method="get";
             form.submit();
         }
 
         function findUsers() {
             var form = document.getElementById("form3");
             form.action = "/data/jpa/all";
-            form.method="get"
+            form.method="get";
             form.submit();
         }
 
         function findUser() {
             var form = document.getElementById("form3");
             form.action = "/data/jpa/find";
-            form.method="post"
+            form.method="post";
             form.submit();
         }
 
         function deleteUser() {
             var form = document.getElementById("form3");
             form.action = "/data/jpa/delete";
-            form.method="post"
+            form.method="post";
             form.submit();
         }
 
         function updateUser() {
             var form = document.getElementById("form3");
             form.action = "/data/jpa/update";
-            form.method="post"
+            form.method="post";
             form.submit();
+        }
+
+        function findMybatisBook() {
+            var form = document.getElementById("form4")
+            form.action = "/data/mybatis/find";
+            form.method = "post";
+            form.submit()
+        }
+
+        function addMybatisBook() {
+            var form = document.getElementById("form4")
+            form.action = "/data/mybatis/add";
+            form.method = "post";
+            form.submit()
+        }
+
+        function findMybatisBooks() {
+            var form = document.getElementById("form4")
+            form.action = "/data/mybatis/all";
+            form.method = "post";
+            form.submit()
+        }
+
+        function updateMybatisBook() {
+            var form = document.getElementById("form4")
+            form.action = "/data/mybatis/update";
+            form.method = "post";
+            form.submit()
+        }
+
+        function deleteMybatisBook(){
+            var form = document.getElementById("form4")
+            form.action = "/data/mybatis/delete";
+            form.method = "post";
+            form.submit()
         }
     </script>
 </head>
@@ -171,6 +206,52 @@
 
             <td>
                 <input type="button" value="deleteJpaData" onclick="deleteUser()">
+            </td>
+        </tr>
+    </table>
+</form>
+
+<hr>
+<p>Mybatis Operation</p>
+<form id="form4">
+    <table>
+        <tr>
+            <td>Book id: </td>
+            <td>
+                <input type="text" name="bookid">
+            </td>
+        </tr>
+        <tr>
+            <td>bookName: </td>
+            <td>
+                <input type="text" name="bookName">
+            </td>
+        </tr>
+        <tr>
+            <td>price: </td>
+            <td>
+                <input type="text" name="price">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="addMybatisData" onclick="addMybatisBook()">
+            </td>
+
+            <td>
+                <input type="button" value="findMybatisaData" onclick="findMybatisBooks()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="updateMybatisData" onclick="updateMybatisBook()">
+            </td>
+            <td>
+                <input type="button" value="findAMybatisData" onclick="findMybatisBook()">
+            </td>
+
+            <td>
+                <input type="button" value="deleteMybatisData" onclick="deleteMybatisBook()">
             </td>
         </tr>
     </table>

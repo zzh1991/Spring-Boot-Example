@@ -36,7 +36,7 @@ public class BookDAOImpl implements BookDAO {
 
     @Override
     public Book findBook(int id) {
-        List<Book> list = jdbcTemplate.query("select * from mybook where id = ?",
+        List<Book> list = jdbcTemplate.query("select * from yourbook where bookid = ?",
                 new Object[]{id}, new BeanPropertyRowMapper<Book>(Book.class));
         if(null != list && list.size()>0){
             Book book = list.get(0);
